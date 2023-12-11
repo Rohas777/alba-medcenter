@@ -16,7 +16,7 @@
             src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
             defer
         ></script>
-        <title>Document</title>
+        <title>Клиника Альба-Мед</title>
     </head>
     <body>
         <div class="fascia">
@@ -33,7 +33,10 @@
                     <div class="fascia__image">
                         <img src="/images/icons/phone.svg" alt="address" />
                     </div>
-                    <p>+7(978) 721-67-31, +7(978) 721-67-23</p>
+                    <p>
+                        <a href="tel:+7(978) 721-67-31">+7(978) 721-67-31</a>,
+                        <a href="tel:+79787216723">+7(978) 721-67-23</a>
+                    </p>
                 </div>
                 <img src="/images/icons/eye.svg" alt="eye" class="fascia__eye" />
             </div>
@@ -41,16 +44,45 @@
         <header>
             <div class="container header__container">
                 <div class="header__content">
-                    <div class="header__logo">
+                    <a href="/" class="header__logo">
                         <img src="/images/logo.png" alt="logo" />
-                    </div>
+                    </a>
                     <nav>
-                        <a href="#">Главная</a>
-                        <a href="#">О центре</a>
-                        <a href="#">Врачи</a>
-                        <a href="#">Все услуги</a>
-                        <a href="#">Стоимость услуг</a>
-                        <a href="#">Контакты</a>
+                        <li>
+                            <a href="/">Главная</a>
+                        </li>
+                        <li class="header__dropdown">
+                            <a href="#" class="dropdown-link">О центре</a>
+                            <ul class="header__popup">
+                                <li>
+                                    <a href="/about">О ЦЕНТРЕ</a>
+                                </li>
+                                <li>
+                                    <a href="#">АКЦИИ</a>
+                                </li>
+                                <li>
+                                    <a href="#">СТАТЬИ</a>
+                                </li>
+                                <li>
+                                    <a href="#">ВРЕМЯ ПРИЁМА АДМИНИСТРАЦИИ</a>
+                                </li>
+                                <li>
+                                    <a href="#">ФОТО И ВИДЕО</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/doctors">Врачи</a>
+                        </li>
+                        <li>
+                            <a href="/catalog">Все услуги</a>
+                        </li>
+                        <li>
+                            <a href="/price">Стоимость услуг</a>
+                        </li>
+                        <li>
+                            <a href="/contacts">Контакты</a>
+                        </li>
                     </nav>
                     <img src="/images/icons/loupe.svg" alt="search" />
                 </div>
@@ -283,7 +315,7 @@
                         <img src="/images/icons/clock2.png" alt="icon" />
                     </div>
                     <div class="contacts__wrapper">
-                        <div class="contacts__workstar">
+                        <div class="contacts__worktime">
                             <h2 class="contacts__title">ВРЕМЯ РАБОТЫ</h2>
                             <ul>
                                 <li>
@@ -338,11 +370,14 @@
                             class="separator"
                             alt="separator"
                         />
-                        <ul>
-                            <li class="dignity__item" data-tab="dignity-tab1">
-                                <div class="dignity__item-head">
+                        <ul class="accordeon">
+                            <li
+                                class="dignity__item accordeon__item active"
+                                data-tab="dignity-tab1"
+                            >
+                                <div class="dignity__item-head accordeon__item-head">
                                     <p>- Врачебный коллектив высочайшего уровня</p>
-                                    <div class="dignity__item-arrow">
+                                    <div class="dignity__item-arrow accordeon__item-arrow">
                                         <img
                                             src="/images/icons/arrowWhite.svg"
                                             alt="arrow"
@@ -351,17 +386,17 @@
                                         />
                                     </div>
                                 </div>
-                                <div class="dignity__item-body">
+                                <div class="dignity__item-body accordeon__item-body">
                                     <p>
                                         Вас принимают кандидаты медицинских наук, врачи с
                                         опытом практики в десятки лет
                                     </p>
                                 </div>
                             </li>
-                            <li class="dignity__item">
-                                <div class="dignity__item-head">
+                            <li class="dignity__item accordeon__item">
+                                <div class="dignity__item-head accordeon__item-head">
                                     <p>- Эффективные методы лечения</p>
-                                    <div class="dignity__item-arrow">
+                                    <div class="dignity__item-arrow accordeon__item-arrow">
                                         <img
                                             src="/images/icons/arrowWhite.svg"
                                             alt="arrow"
@@ -370,17 +405,17 @@
                                         />
                                     </div>
                                 </div>
-                                <div class="dignity__item-body">
+                                <div class="dignity__item-body accordeon__item-body">
                                     <p>
                                         Мы гарантируем Вам эффективное лечение, соблюдение
                                         врачебной этики и конфиденциальность.
                                     </p>
                                 </div>
                             </li>
-                            <li class="dignity__item">
-                                <div class="dignity__item-head">
+                            <li class="dignity__item accordeon__item">
+                                <div class="dignity__item-head accordeon__item-head">
                                     <p>- Удобное расположение</p>
-                                    <div class="dignity__item-arrow">
+                                    <div class="dignity__item-arrow accordeon__item-arrow">
                                         <img
                                             src="/images/icons/arrowWhite.svg"
                                             alt="arrow"
@@ -389,17 +424,17 @@
                                         />
                                     </div>
                                 </div>
-                                <div class="dignity__item-body">
+                                <div class="dignity__item-body accordeon__item-body">
                                     <p>
                                         Все клиники находятся в шаговой доступности от
                                         метро.
                                     </p>
                                 </div>
                             </li>
-                            <li class="dignity__item">
-                                <div class="dignity__item-head">
+                            <li class="dignity__item accordeon__item">
+                                <div class="dignity__item-head accordeon__item-head">
                                     <p>- Высокие стандарты обслуживания</p>
-                                    <div class="dignity__item-arrow">
+                                    <div class="dignity__item-arrow accordeon__item-arrow">
                                         <img
                                             src="/images/icons/arrowWhite.svg"
                                             alt="arrow"
@@ -408,7 +443,7 @@
                                         />
                                     </div>
                                 </div>
-                                <div class="dignity__item-body">
+                                <div class="dignity__item-body accordeon__item-body">
                                     <p>
                                         Мы заботимся о наших клиентах и проводим различные
                                         акции. Так наши пациенты могут проходить лечение по
@@ -518,7 +553,7 @@
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
                                 <div class="swiper-slide slide">
-                                    <div class="specialists__card">
+                                    <a href="#" class="specialists__card">
                                         <div class="specialists__marker">
                                             <span></span>
                                             <img src="/images/icons/time.png" alt="icon" />
@@ -527,12 +562,12 @@
                                             src="/images/employee/70.jpg"
                                             alt="specialist"
                                         />
-                                        <h3>Нуруллаева</br>Ленара Хадыровна</h3>
+                                        <h3>Нуруллаева<br />Ленара Хадыровна</h3>
                                         <p>Врач невролог, детский</p>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="swiper-slide slide">
-                                    <div class="specialists__card">
+                                    <a href="#" class="specialists__card">
                                         <div class="specialists__marker">
                                             <span></span>
                                             <img src="/images/icons/time.png" alt="icon" />
@@ -541,12 +576,12 @@
                                             src="/images/employee/70.jpg"
                                             alt="specialist"
                                         />
-                                        <h3>Нуруллаева</br>Ленара Хадыровна</h3>
+                                        <h3>Нуруллаева<br />Ленара Хадыровна</h3>
                                         <p>Врач невролог, детский</p>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="swiper-slide slide">
-                                    <div class="specialists__card">
+                                    <a href="#" class="specialists__card">
                                         <div class="specialists__marker">
                                             <span></span>
                                             <img src="/images/icons/time.png" alt="icon" />
@@ -555,12 +590,12 @@
                                             src="/images/employee/70.jpg"
                                             alt="specialist"
                                         />
-                                        <h3>Нуруллаева</br>Ленара Хадыровна</h3>
+                                        <h3>Нуруллаева<br />Ленара Хадыровна</h3>
                                         <p>Врач невролог, детский</p>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="swiper-slide slide">
-                                    <div class="specialists__card">
+                                    <a href="#" class="specialists__card">
                                         <div class="specialists__marker">
                                             <span></span>
                                             <img src="/images/icons/time.png" alt="icon" />
@@ -569,12 +604,12 @@
                                             src="/images/employee/70.jpg"
                                             alt="specialist"
                                         />
-                                        <h3>Нуруллаева</br>Ленара Хадыровна</h3>
+                                        <h3>Нуруллаева<br />Ленара Хадыровна</h3>
                                         <p>Врач невролог, детский</p>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="swiper-slide slide">
-                                    <div class="specialists__card">
+                                    <a href="#" class="specialists__card">
                                         <div class="specialists__marker">
                                             <span></span>
                                             <img src="/images/icons/time.png" alt="icon" />
@@ -583,12 +618,12 @@
                                             src="/images/employee/70.jpg"
                                             alt="specialist"
                                         />
-                                        <h3>Нуруллаева</br>Ленара Хадыровна</h3>
+                                        <h3>Нуруллаева<br />Ленара Хадыровна</h3>
                                         <p>Врач невролог, детский</p>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="swiper-slide slide">
-                                    <div class="specialists__card">
+                                    <a href="#" class="specialists__card">
                                         <div class="specialists__marker">
                                             <span></span>
                                             <img src="/images/icons/time.png" alt="icon" />
@@ -597,12 +632,12 @@
                                             src="/images/employee/70.jpg"
                                             alt="specialist"
                                         />
-                                        <h3>Нуруллаева</br>Ленара Хадыровна</h3>
+                                        <h3>Нуруллаева<br />Ленара Хадыровна</h3>
                                         <p>Врач невролог, детский</p>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="swiper-slide slide">
-                                    <div class="specialists__card">
+                                    <a href="#" class="specialists__card">
                                         <div class="specialists__marker">
                                             <span></span>
                                             <img src="/images/icons/time.png" alt="icon" />
@@ -611,12 +646,12 @@
                                             src="/images/employee/70.jpg"
                                             alt="specialist"
                                         />
-                                        <h3>Нуруллаева</br>Ленара Хадыровна</h3>
+                                        <h3>Нуруллаева<br />Ленара Хадыровна</h3>
                                         <p>Врач невролог, детский</p>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="swiper-slide slide">
-                                    <div class="specialists__card">
+                                    <a href="#" class="specialists__card">
                                         <div class="specialists__marker">
                                             <span></span>
                                             <img src="/images/icons/time.png" alt="icon" />
@@ -625,9 +660,9 @@
                                             src="/images/employee/70.jpg"
                                             alt="specialist"
                                         />
-                                        <h3>Нуруллаева</br>Ленара Хадыровна</h3>
+                                        <h3>Нуруллаева<br />Ленара Хадыровна</h3>
                                         <p>Врач невролог, детский</p>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-pagination"></div>
@@ -653,78 +688,116 @@
                     <a href="tel:+7(978)721-67-31">+7(978) 721-67-31</a>
                 </div>
             </section>
+
             <section class="certificates">
+
                 <div class="container certificates__container">
+
                     <h2>СЕРТИФИКАТЫ И ЛИЦЕНЗИИ</h2>
+
                     <img
+
                         src="/images/icons/plusRight.svg"
+
                         class="separator"
+
                         alt="separator"
+
                     />
+
                     <div class="certificates__items">
+
                         <div class="certificates__image">
+
                             <div class="certificates__marker marker">
+
                                 <span></span>
+
                                 <img src="/images/icons/star.svg" alt="icon" />
+
                             </div>
-                            <img
-                                src="/images/certificates/lic1m.jpg"
-                                alt="diploma"
-                            />
+
+                            <img src="/images/certificates/lic1m.jpg" alt="diploma" />
+
                         </div>
+
                         <div class="certificates__image">
+
                             <div class="certificates__marker marker">
+
                                 <span></span>
+
                                 <img src="/images/icons/star.svg" alt="icon" />
+
                             </div>
-                            <img
-                                src="/images/certificates/lic1m.jpg"
-                                alt="diploma"
-                            />
+
+                            <img src="/images/certificates/lic1m.jpg" alt="diploma" />
+
                         </div>
+
                         <div class="certificates__image">
+
                             <div class="certificates__marker marker">
+
                                 <span></span>
+
                                 <img src="/images/icons/star.svg" alt="icon" />
+
                             </div>
-                            <img
-                                src="/images/certificates/lic1m.jpg"
-                                alt="diploma"
-                            />
+
+                            <img src="/images/certificates/lic1m.jpg" alt="diploma" />
+
                         </div>
+
                         <div class="certificates__image">
+
                             <div class="certificates__marker marker">
+
                                 <span></span>
+
                                 <img src="/images/icons/star.svg" alt="icon" />
+
                             </div>
-                            <img
-                                src="/images/certificates/lic1m.jpg"
-                                alt="diploma"
-                            />
+
+                            <img src="/images/certificates/lic1m.jpg" alt="diploma" />
+
                         </div>
+
                         <div class="certificates__image">
+
                             <div class="certificates__marker marker">
+
                                 <span></span>
+
                                 <img src="/images/icons/star.svg" alt="icon" />
+
                             </div>
-                            <img
-                                src="/images/certificates/lic1m.jpg"
-                                alt="diploma"
-                            />
+
+                            <img src="/images/certificates/lic1m.jpg" alt="diploma" />
+
                         </div>
+
                         <div class="certificates__image">
+
                             <div class="certificates__marker marker">
+
                                 <span></span>
+
                                 <img src="/images/icons/star.svg" alt="icon" />
+
                             </div>
-                            <img
-                                src="/images/certificates/lic1m.jpg"
-                                alt="diploma"
-                            />
+
+                            <img src="/images/certificates/lic1m.jpg" alt="diploma" />
+
                         </div>
+
                     </div>
+
                 </div>
+
             </section>
+
+            
             <section class="stats">
                 <div class="container stats__container">
                     <div class="stats__item">
@@ -842,8 +915,128 @@
                 </div>
             </section>
             <section class="map"></section>
+            
         </main>
-        <footer>Футер</footer>
+        <footer class="footer">
+            <div class="container footer__container">
+                <div class="footer__address">
+                    <a href="/"
+                        ><img
+                            src="/images/logoSmall.png"
+                            alt="logo"
+                            class="footer__logo"
+                    /></a>
+                    <div class="footer__address-group">
+                        <div class="footer__item">
+                            <div class="footer__icon">
+                                <img src="/images/icons/location.svg" alt="address" />
+                            </div>
+                            <p>г. Симферополь, ул. Адалет 2</p>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__icon">
+                                <img src="/images/icons/phone.svg" alt="phone" />
+                            </div>
+                            <a href="tel:+7(978) 721-67-31">+7(978) 721-67-31</a>
+                        </div>
+                    </div>
+                    <div class="footer__address-group">
+                        <div class="footer__item">
+                            <div class="footer__icon">
+                                <img src="/images/icons/location.svg" alt="address" />
+                            </div>
+                            <p>г. Симферополь, ул.Киевская 153А.</p>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__icon">
+                                <img src="/images/icons/phone.svg" alt="phone" />
+                            </div>
+                            <a href="tel:+7(978) 721-67-23">+7(978) 721-67-23</a>
+                        </div>
+                    </div>
+                    <div class="footer__address-group">
+                        <div class="footer__item">
+                            <div class="footer__icon">
+                                <img
+                                    src="/images/icons/mail.png"
+                                    alt="mail"
+                                    width="14"
+                                    height="11"
+                                />
+                            </div>
+                            <a href="mailto:SINTAX70@MAIL.RU">SINTAX70@MAIL.RU</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__right">
+                    <div class="footer__body">
+                        <div class="footer__services">
+                            <h2 class="footer__title">Услуги</h2>
+                            <img
+                                src="/images/icons/plusRight.svg"
+                                alt="separator"
+                                class="separator"
+                            />
+                            <p>
+                                В медицинском центре ведут приём врачи: гинеколог,
+                                эндокринолог, маммолог, уролог, венеролог, дерматолог,
+                                эндокринолог, детский гинеколог, косметолог, стоматолог,
+                                УЗИ-диагностика (экспертный класс).
+                            </p>
+                        </div>
+                        <div class="footer__nav">
+                            <h2 class="footer__title">Навигация</h2>
+                            <img
+                                src="/images/icons/plusRight.svg"
+                                alt="separator"
+                                class="separator"
+                            />
+                            <nav>
+                                <a href="/">Главная</a>
+                                <a href="/about">О центре</a>
+                                <a href="/doctors">Врачи</a>
+                                <a href="/catalog">Услуги</a>
+                                <a href="/price">Прайс</a>
+                                <a href="/contacts">Контакты</a>
+                            </nav>
+                        </div>
+                        <div class="footer__worktime">
+                            <h2 class="footer__title">Время работы</h2>
+                            <img
+                                src="/images/icons/plusRight.svg"
+                                alt="separator"
+                                class="separator"
+                            />
+                            <ul>
+                                <li>
+                                    <p>ул.Киевская</p>
+                                    <span>09:00-18:00</span>
+                                </li>
+                                <li>
+                                    <p>ул.Адалет</p>
+                                    <span>08:00-20:00</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__bottom">
+                        <div class="footer__copy">
+                            <span>Все права защищены © 2001-2023 г.</span>
+                            <span>ОГРН: 1149102078212</span>
+                            <span>ИНН: 9102040753</span>
+                        </div>
+                        <div class="footer__developer">
+                            <span>Разработано:</span>
+                            <a href="#"
+                                ><img src="/images/armibLogo.svg" alt="ARBI:M Digital"
+                            /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <div class="callback"></div>
         
         <script src="../js/script.js" type="module" defer></script>
     </body>

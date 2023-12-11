@@ -34,17 +34,10 @@ $(".dignity-swiper .swiper-button-prev").click(function () {
     dignity.slidePrev();
 });
 
+$(".dropdown-link").click(function (e) {
+    e.preventDefault();
+});
 
-/* accordeon */
-
-$(".dignity__item-head").click(function(){
-    if(!$(this).parent('.dignity__item').hasClass("active")){
-        $(".dignity__item.active").removeClass('active')
-        $(this).parent('.dignity__item').addClass('active')
-    } else {
-        $(this).parent('.dignity__item').removeClass('active')
-    }
-})
 const specialists = new Swiper(".specialists-swiper", {
     direction: "horizontal",
     spaceBetween: 30,
@@ -67,4 +60,20 @@ $(".specialists-swiper .swiper-button-next").click(function () {
 });
 $(".specialists-swiper .swiper-button-prev").click(function () {
     swiper.slidePrev();
+});
+
+/* accordeon */
+
+$(".accordeon__item-head").click(function () {
+    if ($(".accordeon").hasClass("without-closing")) {
+        $(this).parent(".accordeon__item").toggleClass("active");
+        return;
+    }
+
+    if (!$(this).parent(".accordeon__item").hasClass("active")) {
+        $(".accordeon__item.active").removeClass("active");
+        $(this).parent(".accordeon__item").addClass("active");
+    } else {
+        $(this).parent(".accordeon__item").removeClass("active");
+    }
 });
