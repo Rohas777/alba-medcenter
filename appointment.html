@@ -16,7 +16,7 @@
             src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
             defer
         ></script>
-        <title>Все услуги медицинского центра</title>
+        <title>Запись к врачу</title>
     </head>
     <body>
         <div class="fascia">
@@ -92,107 +92,46 @@
         <main>
             <section class="hero">
                 <div class="container hero__container">
-                    <h2>УСЛУГИ МЕДИЦИНСКОГО ЦЕНТРА "АЛЬБА-МЕД"</h2>
+                    <h2>Запись к врачу</h2>
                     <div class="hero__nav">
                         <p>
                             <a href="/">Главная</a>
                             <b class="hero__separator">/</b>
-                            <span>Услуги медицинского центра "Альба-Мед"</span>
+                            <span>Запись к врачу</span>
                         </p>
                     </div>
                 </div>
             </section>
-            <section class="catalogpage-accordeon">
-                <div class="container">
-                    <ul class="accordeon without-closing">
-                        <li
-                            class="catalogpage-accordeon__item accordeon__item"
-                            data-tab="catalogpage-accordeon-tab1"
-                        >
-                            <div
-                                class="catalogpage-accordeon__item-head accordeon__item-head"
-                            >
-                                <p>Гинекология</p>
-                                <div
-                                    class="catalogpage-accordeon__item-arrow accordeon__item-arrow"
-                                >
-                                    <img
-                                        src="/images/icons/arrowWhite.svg"
-                                        alt="arrow"
-                                        width="16"
-                                        height="16"
-                                    />
-                                </div>
+            <section class="appointment">
+                <div class="container appointment__container">
+                    <form action="#">
+                        <div class="appointment__inputs">
+                            <div class="appointment__input">
+                                <p>Имя <span>*</span></p>
+                                <input type="text" name="name" id="name" />
                             </div>
-                            <div
-                                class="catalogpage-accordeon__item-body accordeon__item-body"
-                            >
-                                <a href="/single-service.html"
-                                    >Заболевания в гинекологии</a
-                                >
-                                <a href="/single-service.html"
-                                    >Заболевания в гинекологии</a
-                                >
-                                <a href="/single-service.html"
-                                    >Заболевания в гинекологии</a
-                                >
-                                <a href="/single-service.html"
-                                    >Заболевания в гинекологии</a
-                                >
+                            <div class="appointment__input">
+                                <p>Телефон <span>*</span></p>
+                                <input type="tel" name="tel" id="tel" />
                             </div>
-                        </li>
-                        <li
-                            class="catalogpage-accordeon__item accordeon__item"
-                            data-tab="catalogpage-accordeon-tab2"
-                        >
-                            <div
-                                class="catalogpage-accordeon__item-head accordeon__item-head"
-                            >
-                                <p>Медикаментозный аборт</p>
-                                <div
-                                    class="catalogpage-accordeon__item-arrow accordeon__item-arrow"
-                                >
-                                    <img
-                                        src="/images/icons/arrowWhite.svg"
-                                        alt="arrow"
-                                        width="16"
-                                        height="16"
-                                    />
-                                </div>
-                            </div>
-                            <div
-                                class="catalogpage-accordeon__item-body accordeon__item-body"
-                            >
-                                <a href="/single-service.html"
-                                    >Заболевания в гинекологии</a
-                                >
-                                <a href="/single-service.html"
-                                    >Заболевания в гинекологии</a
-                                >
-                                <a href="/single-service.html"
-                                    >Заболевания в гинекологии</a
-                                >
-                                <a href="/single-service.html"
-                                    >Заболевания в гинекологии</a
-                                >
-                                <a href="/single-service.html"
-                                    >Заболевания в гинекологии</a
-                                >
-                                <a href="/single-service.html"
-                                    >Заболевания в гинекологии</a
-                                >
-                                <a href="/single-service.html"
-                                    >Заболевания в гинекологии</a
-                                >
-                                <a href="/single-service.html"
-                                    >Заболевания в гинекологии</a
-                                >
-                                <a href="/single-service.html"
-                                    >Заболевания в гинекологии</a
-                                >
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="appointment__input">
+                            <p>Сообщение</p>
+                            <textarea
+                                name="message"
+                                id="message"
+                                cols="30"
+                                rows="10"
+                            ></textarea>
+                        </div>
+                        <label for="policy">
+                            <input type="checkbox" name="policy" id="policy" />
+                            Согласен с обработкой персональных данных
+                        </label>
+                        <button type="submit" class="btn">
+                            <span>Записаться</span>
+                        </button>
+                    </form>
                 </div>
             </section>
         </main>
