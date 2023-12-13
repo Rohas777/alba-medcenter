@@ -88,9 +88,9 @@ $(".legal__nav-item").click(function () {
 
     info.forEach((element) => {
         if ($(element).attr("id") !== $(this).attr("id")) {
-            $(element).hide(300);
+            $(element).fadeOut(150);
         } else {
-            $(element).show(300);
+            $(element).fadeIn(300);
         }
     });
 });
