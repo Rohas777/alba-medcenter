@@ -88,7 +88,7 @@ $(".legal__nav-item").click(function () {
 
     info.forEach((element) => {
         if ($(element).attr("id") !== $(this).attr("id")) {
-            $(element).fadeOut(150);
+            $(element).fadeOut(0);
         } else {
             $(element).fadeIn(300);
         }
