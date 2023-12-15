@@ -4,16 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/style.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
         <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"
             defer
         ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+        />
         <script
-            src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+            src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"
             defer
         ></script>
         <title>Фото и видео</title>
@@ -47,12 +47,18 @@
                     <a href="/" class="header__logo">
                         <img src="/images/logo.png" alt="logo" />
                     </a>
-                    <nav>
+                    <nav class="header__nav">
+                        <div class="burger__logo">
+                            <h1>ALBA<span>MED</span></h1>
+                            <div class="burger__close">
+                                <span></span>
+                            </div>
+                        </div>
                         <li>
                             <a href="/">Главная</a>
                         </li>
                         <li class="header__dropdown">
-                            <a href="#" class="dropdown-link">О центре</a>
+                            <a href="#" class="dropdown-link">О центре<span></span></a>
                             <ul class="header__popup">
                                 <li>
                                     <a href="/about.html">О ЦЕНТРЕ</a>
@@ -87,7 +93,52 @@
                             <a href="/contacts.html">Контакты</a>
                         </li>
                     </nav>
-                    <img src="/images/icons/loupe.svg" alt="search" />
+                    <div class="header__search">
+                        <div class="header__search-image">
+                            <img src="/images/icons/loupe.svg" alt="search" />
+                        </div>
+                        <form action="#" class="header__search-form">
+                            <label for="search">
+                                <input
+                                    type="text"
+                                    id="search"
+                                    name="search"
+                                    placeholder="Поиск по сайту"
+                                />
+                                <a href="/find.html">find</a>
+        
+                                <button type="submit">
+                                    <svg
+                                        width="14"
+                                        height="16"
+                                        viewBox="0 0 14 16"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <g clip-path="url(#clip0_401_617)">
+                                            <path
+                                                d="M8.58575 10.2545C8.58575 10.2545 8.77011 10.0588 9.13883 9.66741C9.50755 9.27604 9.69191 8.52976 9.69191 7.42857C9.69191 6.32738 9.32319 5.38542 8.58575 4.60268C7.84831 3.81994 6.96086 3.42857 5.9234 3.42857C4.88594 3.42857 3.99849 3.81994 3.26105 4.60268C2.52362 5.38542 2.1549 6.32738 2.1549 7.42857C2.1549 8.52976 2.52362 9.47173 3.26105 10.2545C3.99849 11.0372 4.88594 11.4286 5.9234 11.4286C6.96086 11.4286 7.84831 11.0372 8.58575 10.2545ZM13.9988 14.8571C13.9988 15.1667 13.8922 15.4345 13.6791 15.6607C13.466 15.8869 13.2137 16 12.9221 16C12.6192 16 12.3669 15.8869 12.165 15.6607L9.27973 12.6071C8.27592 13.3452 7.15714 13.7143 5.9234 13.7143C5.12147 13.7143 4.35459 13.5491 3.62276 13.2187C2.89093 12.8884 2.26005 12.442 1.7301 11.8795C1.20015 11.317 0.77956 10.6473 0.468322 9.87054C0.157084 9.09375 0.00146484 8.27976 0.00146484 7.42857C0.00146484 6.57738 0.157084 5.76339 0.468322 4.98661C0.77956 4.20982 1.20015 3.54018 1.7301 2.97768C2.26005 2.41518 2.89093 1.96875 3.62276 1.63839C4.35459 1.30803 5.12147 1.14286 5.9234 1.14286C6.72533 1.14286 7.49221 1.30803 8.22404 1.63839C8.95587 1.96875 9.58676 2.41518 10.1167 2.97768C10.6467 3.54018 11.0672 4.20982 11.3785 4.98661C11.6897 5.76339 11.8453 6.57738 11.8453 7.42857C11.8453 8.73809 11.4977 9.92559 10.8023 10.9911L13.6875 14.0536C13.895 14.2738 13.9988 14.5417 13.9988 14.8571Z"
+                                                fill="#E0502E"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_401_617">
+                                                <rect
+                                                    width="14"
+                                                    height="16"
+                                                    fill="white"
+                                                    transform="matrix(1 0 0 -1 0 16)"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="header__burger">
+                        <img src="/images/icons/burger.svg" alt="burger" />
+                    </div>
                 </div>
             </div>
         </header>
@@ -108,102 +159,230 @@
             <section class="photopage">
                 <div class="container">
                     <div class="photopage__container">
-                        <div class="photopage__card">
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
                             <img src="/images/photos/1.jpg" alt="photo" />
 
                             <div class="photopage__card-marker">
-                                <img src="/images/icons/time.png" alt="icon" />
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
                                 <span></span>
                             </div>
-                        </div>
-                        <div class="photopage__card">
+                        </a>
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
                             <img src="/images/photos/1.jpg" alt="photo" />
 
                             <div class="photopage__card-marker">
-                                <img src="/images/icons/time.png" alt="icon" />
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
                                 <span></span>
                             </div>
-                        </div>
-                        <div class="photopage__card">
+                        </a>
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
                             <img src="/images/photos/1.jpg" alt="photo" />
 
                             <div class="photopage__card-marker">
-                                <img src="/images/icons/time.png" alt="icon" />
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
                                 <span></span>
                             </div>
-                        </div>
-                        <div class="photopage__card">
+                        </a>
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
                             <img src="/images/photos/1.jpg" alt="photo" />
 
                             <div class="photopage__card-marker">
-                                <img src="/images/icons/time.png" alt="icon" />
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
                                 <span></span>
                             </div>
-                        </div>
-                        <div class="photopage__card">
+                        </a>
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
                             <img src="/images/photos/1.jpg" alt="photo" />
 
                             <div class="photopage__card-marker">
-                                <img src="/images/icons/time.png" alt="icon" />
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
                                 <span></span>
                             </div>
-                        </div>
-                        <div class="photopage__card">
+                        </a>
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
                             <img src="/images/photos/1.jpg" alt="photo" />
 
                             <div class="photopage__card-marker">
-                                <img src="/images/icons/time.png" alt="icon" />
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
                                 <span></span>
                             </div>
-                        </div>
-                        <div class="photopage__card">
+                        </a>
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
                             <img src="/images/photos/1.jpg" alt="photo" />
 
                             <div class="photopage__card-marker">
-                                <img src="/images/icons/time.png" alt="icon" />
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
                                 <span></span>
                             </div>
-                        </div>
-                        <div class="photopage__card">
+                        </a>
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
                             <img src="/images/photos/1.jpg" alt="photo" />
 
                             <div class="photopage__card-marker">
-                                <img src="/images/icons/time.png" alt="icon" />
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
                                 <span></span>
                             </div>
-                        </div>
-                        <div class="photopage__card">
+                        </a>
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
                             <img src="/images/photos/1.jpg" alt="photo" />
 
                             <div class="photopage__card-marker">
-                                <img src="/images/icons/time.png" alt="icon" />
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
                                 <span></span>
                             </div>
-                        </div>
-                        <div class="photopage__card">
+                        </a>
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
                             <img src="/images/photos/1.jpg" alt="photo" />
 
                             <div class="photopage__card-marker">
-                                <img src="/images/icons/time.png" alt="icon" />
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
                                 <span></span>
                             </div>
-                        </div>
-                        <div class="photopage__card">
+                        </a>
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
                             <img src="/images/photos/1.jpg" alt="photo" />
 
                             <div class="photopage__card-marker">
-                                <img src="/images/icons/time.png" alt="icon" />
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
                                 <span></span>
                             </div>
-                        </div>
-                        <div class="photopage__card">
+                        </a>
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
                             <img src="/images/photos/1.jpg" alt="photo" />
 
                             <div class="photopage__card-marker">
-                                <img src="/images/icons/time.png" alt="icon" />
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
                                 <span></span>
                             </div>
-                        </div>
+                        </a>
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
+                            <img src="/images/photos/1.jpg" alt="photo" />
+
+                            <div class="photopage__card-marker">
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
+                                <span></span>
+                            </div>
+                        </a>
+                        <a
+                            href="/images/photos/1.jpg"
+                            data-fancybox="gallery-photo"
+                            data-caption="Caption 1"
+                            class="photopage__card"
+                        >
+                            <img src="/images/photos/1.jpg" alt="photo" />
+
+                            <div class="photopage__card-marker">
+                                <img
+                                    src="/images/icons/loupe2.svg"
+                                    alt="icon"
+                                />
+                                <span></span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -445,6 +624,44 @@
 
         </footer>
 
+        
+        <section class="appointment">
+            <div class="overlay"></div>
+            <div class="container appointment__container">
+                <h2>Заказать обратный звонок</h2>
+                <div class="appointment__close">
+                    <span></span>
+                </div>
+                <form action="#">
+                    <div class="appointment__inputs">
+                        <div class="appointment__input">
+                            <p>Имя <span>*</span></p>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="appointment__input">
+                            <p>Телефон <span>*</span></p>
+                            <input type="tel" name="tel" id="tel" />
+                        </div>
+                    </div>
+                    <div class="appointment__input">
+                        <p>Сообщение</p>
+                        <textarea
+                            name="message"
+                            id="message"
+                            cols="30"
+                            rows="10"
+                        ></textarea>
+                    </div>
+                    <label for="policy">
+                        <input type="checkbox" name="policy" id="policy" />
+                        Согласен с обработкой персональных данных
+                    </label>
+                    <button type="submit" class="btn">
+                        <span>Заказать звонок</span>
+                    </button>
+                </form>
+            </div>
+        </section>
         
         <div class="callback"></div>
         
