@@ -992,12 +992,10 @@ h6 {
 }
 
 .legal__nav {
-  position: sticky;
-  top: 100px;
   border-radius: 8px;
   border: 1px solid #e3e3e3;
   width: 365px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .legal__nav-item {
