@@ -333,6 +333,71 @@ h6 {
   display: none;
 }
 
+.cards-container {
+  display: -moz-inline-grid;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #e3e3e3;
+  transition: all 0.3s ease 0s;
+}
+
+.card:hover {
+  border: 1px solid #e0502e;
+}
+
+.card:hover a {
+  gap: 10px;
+}
+
+.card-image {
+  margin-bottom: 10px;
+  overflow: hidden;
+  height: 200px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-date {
+  line-height: 19px;
+  color: #e3e3e3;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card h3 {
+  font-family: Montserrat;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.card-description {
+  line-height: 26px;
+  color: #757575;
+  margin-bottom: 50px;
+}
+
+.card-button {
+  display: inline-block;
+  padding: 12px 20px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .aboutage-text {
   padding: 40px 0;
 }
@@ -393,7 +458,7 @@ h6 {
   -o-object-fit: contain;
   object-fit: contain;
   width: auto;
-  width: 262.5px;
+  width: 100%;
 }
 
 .doctorspage-staff__card h3 {
@@ -448,8 +513,9 @@ h6 {
 }
 
 .catalogpage-accordeon__item-content {
-  display: flex;
-  flex-wrap: wrap;
+  display: -moz-grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   padding: 20px 40px 40px 20px;
 }
@@ -457,7 +523,8 @@ h6 {
 .catalogpage-accordeon__item-content a {
   color: #757575;
   transition: color 0.5s ease 0s;
-  width: 47%;
+  display: block;
+  width: 100%;
   position: relative;
   margin-left: 25px;
 }
@@ -584,7 +651,6 @@ h6 {
 .contactspage-form form label {
   display: flex;
   gap: 10px;
-  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -597,6 +663,7 @@ h6 {
 
 .contactspage-form form button {
   padding: 10px 30px;
+  margin: 0px auto;
 }
 
 .contactspage-form form button p {
@@ -616,7 +683,8 @@ h6 {
 .contactspage-form__inputs input {
   height: 50px;
   display: flex;
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 0;
   align-items: center;
 }
 
@@ -699,86 +767,50 @@ h6 {
 .sharespage__container {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .sharespage__shares {
   flex: 1 0;
 }
 
-.sharespage__card {
-  margin-bottom: 40px;
-}
-
-.sharespage__card:hover .sharespage__card-image img {
-  transform: scale(1.1);
-}
-
-.sharespage__card:hover a {
-  gap: 10px;
-}
-
-.sharespage__card-image {
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-
-.sharespage__card-image img {
-  transform: scale(1);
-  transition: transform 0.3s ease 0s;
-}
-
-.sharespage__card h3 {
-  font-size: 18px;
-  line-height: 32px;
-  font-weight: 600;
-  font-family: Montserrat;
-  margin-bottom: 10px;
-}
-
-.sharespage__card ul {
-  margin-bottom: 10px;
-  color: #757575;
+.sharespage__pagination {
   display: flex;
-  gap: 35px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.sharespage__card ul li {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 10px;
-  position: relative;
+.sharespage__pagination-prev,
+.sharespage__pagination-next {
+  padding: 12px 48px;
 }
 
-.sharespage__card ul li:after {
-  content: "";
-  background-color: #757575;
-  position: absolute;
-  top: 4px;
-  right: -17px;
-  width: 1px;
-  height: 73%;
+.sharespage__pagination ul {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
 }
 
-.sharespage__card ul li:last-of-type::after {
-  content: none;
-}
-
-.sharespage__card-description {
-  line-height: 26px;
-  color: #757575;
-  margin-bottom: 18px;
-}
-
-.sharespage__card a {
+.sharespage__pagination ul li {
+  height: 45px;
+  width: 45px;
+  border-radius: 1000px;
+  background-color: transparent;
+  transition: all 0.3s ease 0s;
   display: flex;
   align-items: center;
-  gap: 5px;
-  transition: gap 0.3s ease 0s;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid transparent;
 }
 
-.sharespage__card a span {
-  line-height: 24px;
-  color: #e0502e;
+.sharespage__pagination ul li:hover {
+  border: 2px solid #e0502e;
+}
+
+.sharespage__pagination ul li.active {
+  color: #ffffff;
+  background-color: #e0502e;
 }
 
 .blogpage {
@@ -788,87 +820,50 @@ h6 {
 .blogpage__container {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .blogpage__shares {
   flex: 1 0;
 }
 
-.blogpage__card {
-  margin-bottom: 40px;
-}
-
-.blogpage__card:hover .blogpage__card-image img {
-  transform: scale(1.1);
-}
-
-.blogpage__card:hover a {
-  gap: 10px;
-}
-
-.blogpage__card-image {
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-
-.blogpage__card-image img {
-  transform: scale(1);
-  transition: transform 0.3s ease 0s;
-}
-
-.blogpage__card h3 {
-  font-size: 18px;
-  line-height: 32px;
-  font-weight: 600;
-  font-family: Montserrat;
-  margin-bottom: 10px;
-  transition: color 0.3s ease 0s;
-}
-
-.blogpage__card ul {
-  margin-bottom: 10px;
-  color: #757575;
+.blogpage__pagination {
   display: flex;
-  gap: 35px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.blogpage__card ul li {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 10px;
-  position: relative;
+.blogpage__pagination-prev,
+.blogpage__pagination-next {
+  padding: 12px 48px;
 }
 
-.blogpage__card ul li:after {
-  content: "";
-  background-color: #757575;
-  position: absolute;
-  top: 4px;
-  right: -17px;
-  width: 1px;
-  height: 73%;
+.blogpage__pagination ul {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
 }
 
-.blogpage__card ul li:last-of-type::after {
-  content: none;
-}
-
-.blogpage__card-description {
-  line-height: 26px;
-  color: #757575;
-  margin-bottom: 18px;
-}
-
-.blogpage__card a {
+.blogpage__pagination ul li {
+  height: 45px;
+  width: 45px;
+  border-radius: 1000px;
+  background-color: transparent;
+  transition: all 0.3s ease 0s;
   display: flex;
   align-items: center;
-  gap: 5px;
-  transition: gap 0.3s ease 0s;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid transparent;
 }
 
-.blogpage__card a span {
-  line-height: 24px;
-  color: #e0502e;
+.blogpage__pagination ul li:hover {
+  border: 2px solid #e0502e;
+}
+
+.blogpage__pagination ul li.active {
+  color: #ffffff;
+  background-color: #e0502e;
 }
 
 .timepage {
@@ -886,6 +881,10 @@ h6 {
 .timepage__title {
   text-align: center;
   margin-bottom: 24px;
+}
+
+.timepage__table {
+  width: 100%;
 }
 
 .timepage table {
@@ -929,7 +928,7 @@ h6 {
   width: 100%;
   display: -moz-grid;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
 }
 
@@ -994,7 +993,7 @@ h6 {
 
 .legal__nav {
   position: sticky;
-  top: 140px;
+  top: 100px;
   border-radius: 8px;
   border: 1px solid #e3e3e3;
   width: 365px;
@@ -1024,57 +1023,119 @@ h6 {
 }
 
 .single-share {
-  padding: 40px 0;
-  line-height: 24px;
-  color: #757575;
+  padding: 100px 0 40px;
 }
 
-.single-share img {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+.single-share__container {
+  display: flex;
+  gap: 20px;
+}
+
+.single-share__share {
+  margin-bottom: 100px;
+}
+
+.single-share__share h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 32px;
   margin-bottom: 10px;
+}
+
+.single-share__date {
+  font-size: 18px;
+  line-height: 26px;
+  color: #e0502e;
 }
 
 .single-share__text {
-  margin-bottom: 24px;
+  font-family: "Open Sans";
+  line-height: 26px;
+  color: #757575;
+  margin-bottom: 30px;
 }
 
-.single-share__text p {
+.single-share__text ul p {
+  color: #000000;
   margin-bottom: 10px;
 }
 
-.single-share a {
-  font-family: Montserrat;
-  line-height: 32px;
-  color: #e0502e;
+.single-share__text ul li {
+  list-style: disc;
+  margin-left: 30px;
 }
 
-.single-news {
-  padding: 40px 0;
-  line-height: 24px;
-  color: #757575;
+.single-share__button {
+  padding: 12px 20px;
+  display: inline-block;
 }
 
-.single-news img {
+.single-share__another-button {
+  display: inline-block;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 10px;
+  padding: 12px 48px;
 }
 
-.single-news__text {
-  margin-bottom: 24px;
+.single-news {
+  padding: 100px 0 40px;
 }
 
-.single-news__text p {
-  margin-bottom: 10px;
+.single-news__container {
+  display: flex;
+  gap: 20px;
 }
 
-.single-news a {
-  font-family: Montserrat;
+.single-news__news {
+  margin-bottom: 100px;
+}
+
+.single-news__news h2 {
+  font-size: 30px;
+  font-weight: 700;
   line-height: 32px;
-  color: #e0502e;
+  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.single-news__news p {
+  line-height: 28px;
+  color: #757575;
+  margin-bottom: 30px;
+}
+
+.single-news__news img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.single-news__news ul {
+  margin-bottom: 30px;
+}
+
+.single-news__news ul p {
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.single-news__news ul li {
+  list-style: disc;
+  margin-left: 30px;
+}
+
+.single-news__button {
+  padding: 12px 20px;
+  display: inline-block;
+}
+
+.single-news__another-button {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 48px;
 }
 
 .single-doctor {
@@ -1284,7 +1345,7 @@ header .header__content {
 header .header__logo {
   position: absolute;
   z-index: 10;
-  top: 50%;
+  top: -500%;
   left: -15px;
   transform: translateY(-50%);
 }
@@ -1427,6 +1488,11 @@ header nav .header__dropdown .dropdown-link span::after {
 header nav .header__dropdown .dropdown-link span::before {
   height: 2px;
   width: 12px;
+}
+
+header nav .header__dropdown.active {
+  border-bottom: 2px solid #ffffff;
+  z-index: 2;
 }
 
 header nav .header__dropdown.active .dropdown-link {
@@ -3346,6 +3412,55 @@ h2 {
 }
 
 @media only screen and (max-width: 1200px) {
+  .hero__container {
+    align-items: center;
+  }
+
+  .card {
+    max-width: 1200px;
+    width: auto;
+  }
+
+  .card-image {
+    width: auto;
+  }
+
+  .doctorspage-staff__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sharespage__container {
+    justify-content: start;
+  }
+
+  .sharespage__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .sharespage__pagination ul li:nth-of-type(3),
+  .sharespage__pagination ul li:nth-of-type(4),
+  .sharespage__pagination ul li:nth-of-type(5) {
+    display: none;
+  }
+
+  .blogpage__container {
+    justify-content: start;
+  }
+
+  .blogpage__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .blogpage__pagination ul li:nth-of-type(3),
+  .blogpage__pagination ul li:nth-of-type(4),
+  .blogpage__pagination ul li:nth-of-type(5) {
+    display: none;
+  }
+
+  .photopage__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   header .header__content {
     gap: 0;
   }
@@ -3394,6 +3509,35 @@ h2 {
 }
 
 @media only screen and (max-width: 992px) {
+  .doctorspage-staff__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contactspage-form__container {
+    width: 100%;
+  }
+
+  .contactspage-cards__container {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .sharespage__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .blogpage__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photopage__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .legal__nav {
+    width: 215px;
+  }
+
   .fascia {
     z-index: 0;
   }
@@ -3481,8 +3625,15 @@ h2 {
     border: none;
   }
 
+  header nav .header__dropdown .header__popup li {
+    height: auto;
+  }
+
   header nav .header__dropdown .header__popup li a {
-    padding: 16px 22px;
+    padding: 14px 22px;
+    line-height: 12px;
+    font-size: 12px;
+    font-weight: 700;
   }
 
   header nav .header__dropdown:hover a {
@@ -3544,6 +3695,14 @@ h2 {
   .map {
     top: 0;
     margin-bottom: 0;
+  }
+
+  .appointment__container {
+    max-width: 640px;
+  }
+
+  .services-widget-accordeon {
+    display: none;
   }
 
   .container {
@@ -3620,6 +3779,45 @@ h2 {
 }
 
 @media only screen and (max-width: 768px) {
+  .hero h2 {
+    text-align: center;
+  }
+
+  .hero__nav {
+    text-align: center;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutage-text img {
+    float: none;
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+  }
+
+  .catalogpage-accordeon__item-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contactspage-form {
+    background: none;
+  }
+
+  .legal__container {
+    flex-direction: column;
+  }
+
+  .legal__nav {
+    width: 100%;
+  }
+
+  .single-doctor__doctor img {
+    width: 250px;
+  }
+
   .fascia__eye {
     margin-right: 15px;
   }
@@ -3696,6 +3894,11 @@ h2 {
     display: none;
   }
 
+  .appointment__container {
+    padding: 20px !important;
+    max-width: 500px;
+  }
+
   .container {
     width: 100%;
     padding: 0 15px;
@@ -3725,6 +3928,48 @@ h2 {
 }
 
 @media only screen and (max-width: 600px) {
+  .doctorspage-staff__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .sharespage__pagination ul {
+    gap: 5px;
+  }
+
+  .sharespage__pagination ul li:nth-of-type(1) {
+    display: none;
+  }
+
+  .blogpage__pagination ul {
+    gap: 5px;
+  }
+
+  .blogpage__pagination ul li:nth-of-type(1) {
+    display: none;
+  }
+
+  .timepage__table {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+  .timepage table {
+    display: inline-block;
+    width: 1140px;
+  }
+
+  .photopage__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .single-doctor__doctor img {
+    width: 100%;
+    float: none;
+    margin: 0px auto;
+    margin-bottom: 30px;
+  }
+
   .fascia__container {
     padding-right: 65px !important;
   }
@@ -3764,6 +4009,16 @@ h2 {
     flex-wrap: wrap;
   }
 
+  .appointment__container {
+    padding: 40px 20px !important;
+    max-width: 300px;
+  }
+
+  .appointment__inputs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .about__image {
     width: 100%;
     height: auto;
@@ -3798,6 +4053,35 @@ h2 {
 }
 
 @media only screen and (max-width: 470px) {
+  .hero h2 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .pricepage-accordeon__item-content {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+  .pricepage-accordeon__item-content table {
+    width: 500px;
+  }
+
+  .contactspage-form__inputs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sharespage__pagination ul li {
+    display: none;
+  }
+
+  .blogpage__pagination ul li {
+    display: none;
+  }
+
   .banner h2 {
     font-weight: 700;
     line-height: 32px;

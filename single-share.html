@@ -16,6 +16,14 @@
             src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
             defer
         ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"
+            defer
+        ></script>
         <title>ПРИЁМ ГАСТРОЭНТЕРОЛОГА 700 РУБ.</title>
     </head>
     <body>
@@ -105,7 +113,6 @@
                                     name="search"
                                     placeholder="Поиск по сайту"
                                 />
-                                <a href="/find.html">find</a>
         
                                 <button type="submit">
                                     <svg
@@ -160,41 +167,179 @@
             </section>
             <section class="single-share">
                 <div class="container single-share__container">
-                    <img src="/images/articles/39.jpg" alt="article" />
-                    <div class="single-share__text">
-                        <p>
-                            С 01 по 31 декабря, всем новым пациентам, скидка 50%
-                        </p>
-                        <p>
-                            Скидка действует на обследование "УЗИ органов малого
-                            таза" у врача акушера-гинеколога Мурадасиловой Зийде
-                            Наримановны
-                        </p>
-                        <p>
-                            Для всех остальных пациентов данное обследование по
-                            акционной цене
-                        </p>
-                        <p>
-                            Акция на проведения диагностики биохимического
-                            исследования крови по восьми основным показателям:
-                        </p>
-                        <p>
-                            - Алат <br />
-                            - Асат <br />
-                            - Билирубин общий <br />
-                            - Креатинин <br />
-                            - Мочевина <br />
-                            - Общий белок <br />
-                            - Глюкоза <br />
-                            - Холестерин <br />
-                        </p>
-                        <p>Стоимость исследования крови всего за 800 рублей</p>
-                        <strong
-                            >В предверии Нового Года - приведите свое здоровье в
-                            порядок!</strong
-                        >
+                    <div class="single-share__body">
+                        <div class="single-share__share">
+                            <h2>Приём Гастроэнтеролога</h2>
+                            <p class="single-share__date">
+                                с 21 декабря по 30 декабря
+                            </p>
+                            <img
+                                src="/images/icons/plusRight.svg"
+                                alt="separator"
+                                class="separator"
+                            />
+                            <div class="single-share__text">
+                                <p>
+                                    Повседневная практика показывает, что
+                                    экономическая повестка сегодняшнего дня
+                                    позволяет выполнить важные задания по
+                                    разработке как самодостаточных, так и внешне
+                                    зависимых концептуальных решений.
+                                </p>
+                                <ul>
+                                    <p>Условия:</p>
+                                    <li>Условие 1</li>
+                                    <li>Условие 2</li>
+                                </ul>
+                            </div>
+                            <a
+                                href="#"
+                                class="single-share__button openModal btn"
+                            >
+                                <span>Записаться к врачу</span>
+                            </a>
+                        </div>
+                        <div class="single-share__another another">
+                            <h2>Другие акции</h2>
+
+                            <img
+                                src="/images/icons/plusRight.svg"
+                                alt="separator"
+                                class="separator"
+                            />
+                            <div class="single-share__cards cards-container">
+                                <div class="single-share__card card">
+                                    <div
+                                        class="single-share__card-image card-image"
+                                        style="
+                                            background-image: url(/images/articles/39.jpg);
+                                        "
+                                    ></div>
+                                    <p
+                                        class="single-share__card-date card-date"
+                                    >
+                                        21 декабря 2022 г.
+                                    </p>
+                                    <h3>Приём Гастроэнтеролога 700 Руб.</h3>
+                                    <p
+                                        class="single-share__card-description card-description"
+                                    >
+                                        С 21 декабря по 30 декабря, приём
+                                        гастроэнтеролога всего 700 руб.
+                                    </p>
+                                    <a
+                                        href="/single-share.html"
+                                        class="single-share__card-button card-button btn"
+                                    >
+                                        <span>Подробнее</span>
+                                    </a>
+                                </div>
+
+                                <div class="single-share__card card">
+                                    <div
+                                        class="single-share__card-image card-image"
+                                        style="
+                                            background-image: url(/images/articles/39.jpg);
+                                        "
+                                    ></div>
+                                    <p
+                                        class="single-share__card-date card-date"
+                                    >
+                                        21 декабря 2022 г.
+                                    </p>
+                                    <h3>Приём Гастроэнтеролога 700 Руб.</h3>
+                                    <p
+                                        class="single-share__card-description card-description"
+                                    >
+                                        С 21 декабря по 30 декабря, приём
+                                        гастроэнтеролога всего 700 руб.
+                                    </p>
+                                    <a
+                                        href="/single-share.html"
+                                        class="single-share__card-button card-button btn"
+                                    >
+                                        <span>Подробнее</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <a
+                                href="/shares.html"
+                                class="single-share__another-button another-button btn"
+                            >
+                                <span> Смотреть все </span>
+                            </a>
+                        </div>
                     </div>
-                    <a href="#" class="openModal">Записаться к врачу</a>
+                    <section class="services-widget-accordeon">
+                        <ul class="accordeon">
+                            <li
+                                class="services-widget-accordeon__item accordeon__item"
+                                data-tab="services-widget-accordeon-tab1"
+                            >
+                                <div
+                                    class="services-widget-accordeon__item-head accordeon__item-head"
+                                >
+                                    <p>Гинекология</p>
+                                    <div
+                                        class="services-widget-accordeon__item-arrow accordeon__item-arrow"
+                                    >
+                                        <img
+                                            src="/images/icons/arrowWhite.svg"
+                                            alt="arrow"
+                                            width="16"
+                                            height="16"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="services-widget-accordeon__item-body accordeon__item-body"
+                                >
+                                    <div class="services-widget-accordeon__item-content">
+                                        <a href="#">Заболевания в гинекологии</a>
+                                        <a href="#">Заболевания в гинекологии</a>
+                                        <a href="#">Заболевания в гинекологии</a>
+                                        <a href="#">Заболевания в гинекологии</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li
+                                class="services-widget-accordeon__item accordeon__item"
+                                data-tab="services-widget-accordeon-tab2"
+                            >
+                                <div
+                                    class="services-widget-accordeon__item-head accordeon__item-head"
+                                >
+                                    <p>Медикаментозный аборт</p>
+                                    <div
+                                        class="services-widget-accordeon__item-arrow accordeon__item-arrow"
+                                    >
+                                        <img
+                                            src="/images/icons/arrowWhite.svg"
+                                            alt="arrow"
+                                            width="16"
+                                            height="16"
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    class="services-widget-accordeon__item-body accordeon__item-body"
+                                >
+                                    <div class="services-widget-accordeon__item-content">
+                                        <a href="#">Заболевания в гинекологии</a>
+                                        <a href="#">Заболевания в гинекологии</a>
+                                        <a href="#">Заболевания в гинекологии</a>
+                                        <a href="#">Заболевания в гинекологии</a>
+                                        <a href="#">Заболевания в гинекологии</a>
+                                        <a href="#">Заболевания в гинекологии</a>
+                                        <a href="#">Заболевания в гинекологии</a>
+                                        <a href="#">Заболевания в гинекологии</a>
+                                        <a href="#">Заболевания в гинекологии</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
                 </div>
             </section>
         </main>

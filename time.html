@@ -16,6 +16,14 @@
             src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
             defer
         ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"
+            defer
+        ></script>
         <title>Время приёма администрации</title>
     </head>
     <body>
@@ -105,7 +113,6 @@
                                     name="search"
                                     placeholder="Поиск по сайту"
                                 />
-                                <a href="/find.html">find</a>
         
                                 <button type="submit">
                                     <svg
@@ -163,33 +170,35 @@
                         ДИРЕКТОРОМ ООО "АЛЬБА-МЕД" И ГЛАВНЫМ ВРАЧОМ ООО
                         «АЛЬБА-МЕД»
                     </p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ФИО</th>
-                                <th>ДОЛЖНОСТЬ</th>
-                                <th>ПРИЁМНЫЕ ДНИ</th>
-                                <th>ВРЕМЯ ПРИЁМА</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Мурадасилов Эльдар Ризаевич</td>
-                                <td>Директор ООО «АЛЬБА-МЕД»</td>
-                                <td>ежедневно</td>
-                                <td>С 9-00 до 18-00</td>
-                            </tr>
-                            <tr>
-                                <td>Мурадасилова Зийде Наримановна</td>
-                                <td>Главный Врач ООО «АЛЬБА-МЕД»</td>
-                                <td>
-                                    Нечетные дни. Суббота, воскресенье -<br />
-                                    выходные
-                                </td>
-                                <td>С 14-00 до 15-00</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="timepage__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ФИО</th>
+                                    <th>ДОЛЖНОСТЬ</th>
+                                    <th>ПРИЁМНЫЕ ДНИ</th>
+                                    <th>ВРЕМЯ ПРИЁМА</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Мурадасилов Эльдар Ризаевич</td>
+                                    <td>Директор ООО «АЛЬБА-МЕД»</td>
+                                    <td>ежедневно</td>
+                                    <td>С 9-00 до 18-00</td>
+                                </tr>
+                                <tr>
+                                    <td>Мурадасилова Зийде Наримановна</td>
+                                    <td>Главный Врач ООО «АЛЬБА-МЕД»</td>
+                                    <td>
+                                        Нечетные дни. Суббота, воскресенье -<br />
+                                        выходные
+                                    </td>
+                                    <td>С 14-00 до 15-00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </section>
         </main>

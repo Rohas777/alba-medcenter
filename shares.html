@@ -16,6 +16,14 @@
             src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
             defer
         ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"
+            defer
+        ></script>
         <title>Акции</title>
     </head>
     <body>
@@ -105,7 +113,6 @@
                                     name="search"
                                     placeholder="Поиск по сайту"
                                 />
-                                <a href="/find.html">find</a>
         
                                 <button type="submit">
                                     <svg
@@ -159,86 +166,98 @@
             <section class="sharespage">
                 <div class="container sharespage__container">
                     <div class="sharespage__shares">
-                        <div class="sharespage__card">
-                            <a
-                                href="/single-share.html"
-                                class="sharespage__card-image"
-                            >
-                                <img
-                                    src="/images/articles/39.jpg"
-                                    alt="article"
-                                />
-                            </a>
-                            <h3>Приём Гастроэнтеролога 700 Руб.</h3>
-                            <ul>
-                                <li>Дата публикации</li>
-                                <li>21 декабря 2022 г.</li>
-                            </ul>
-                            <p class="sharespage__card-description">
-                                С 21 декабря по 30 декабря, приём
-                                гастроэнтеролога всего 700 руб.
-                            </p>
-                            <a href="/single-share.html">
-                                <span>Читать полностью </span>
-                                <img
-                                    src="/images/icons/arrowLink.svg"
-                                    alt="arrow"
-                                />
-                            </a>
+                        <div class="sharespage__cards cards-container">
+                            <div class="sharespage__card card">
+                                <div
+                                    class="sharespage__card-image card-image"
+                                    style="
+                                        background-image: url(/images/articles/39.jpg);
+                                    "
+                                ></div>
+                                <p class="sharespage__card-date card-date">
+                                    <span>11.12.2023</span>
+                                </p>
+                                <h3>Приём Гастроэнтеролога 700 Руб.</h3>
+                                <p
+                                    class="sharespage__card-description card-description"
+                                >
+                                    С 21 декабря по 30 декабря, приём
+                                    гастроэнтеролога всего 700 руб.
+                                </p>
+                                <a
+                                    href="/single-share.html"
+                                    class="sharespage__card-button card-button btn"
+                                >
+                                    <span>Подробнее</span>
+                                </a>
+                            </div>
+                            <div class="sharespage__card card">
+                                <div
+                                    class="sharespage__card-image card-image"
+                                    style="
+                                        background-image: url(/images/articles/39.jpg);
+                                    "
+                                ></div>
+                                <p class="sharespage__card-date card-date">
+                                    <span>11.12.2023</span>
+                                </p>
+                                <h3>Приём Гастроэнтеролога 700 Руб.</h3>
+                                <p
+                                    class="sharespage__card-description card-description"
+                                >
+                                    С 21 декабря по 30 декабря, приём
+                                    гастроэнтеролога всего 700 руб.
+                                </p>
+                                <a
+                                    href="/single-share.html"
+                                    class="sharespage__card-button card-button btn"
+                                >
+                                    <span>Подробнее</span>
+                                </a>
+                            </div>
+                            <div class="sharespage__card card">
+                                <div
+                                    class="sharespage__card-image card-image"
+                                    style="
+                                        background-image: url(/images/articles/39.jpg);
+                                    "
+                                ></div>
+                                <p class="sharespage__card-date card-date">
+                                    <span>11.12.2023</span>
+                                </p>
+                                <h3>Приём Гастроэнтеролога 700 Руб.</h3>
+                                <p
+                                    class="sharespage__card-description card-description"
+                                >
+                                    С 21 декабря по 30 декабря, приём
+                                    гастроэнтеролога всего 700 руб.
+                                </p>
+                                <a
+                                    href="/single-share.html"
+                                    class="sharespage__card-button card-button btn"
+                                >
+                                    <span>Подробнее</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="sharespage__card">
-                            <a
-                                href="/single-share.html"
-                                class="sharespage__card-image"
-                            >
-                                <img
-                                    src="/images/articles/39.jpg"
-                                    alt="article"
-                                />
-                            </a>
-                            <h3>Приём Гастроэнтеролога 700 Руб.</h3>
+                        <div class="sharespage__pagination">
+                            <div class="sharespage__pagination-prev btn">
+                                <span>Назад</span>
+                            </div>
                             <ul>
-                                <li>Дата публикации</li>
-                                <li>21 декабря 2022 г.</li>
+                                <li>1</li>
+                                <li class="active">2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li class="sharespage__pagination-between">
+                                    ...
+                                </li>
+                                <li>28</li>
                             </ul>
-                            <p class="sharespage__card-description">
-                                С 21 декабря по 30 декабря, приём
-                                гастроэнтеролога всего 700 руб.
-                            </p>
-                            <a href="/single-share.html">
-                                <span>Читать полностью </span>
-                                <img
-                                    src="/images/icons/arrowLink.svg"
-                                    alt="arrow"
-                                />
-                            </a>
-                        </div>
-                        <div class="sharespage__card">
-                            <a
-                                href="/single-share.html"
-                                class="sharespage__card-image"
-                            >
-                                <img
-                                    src="/images/articles/39.jpg"
-                                    alt="article"
-                                />
-                            </a>
-                            <h3>Приём Гастроэнтеролога 700 Руб.</h3>
-                            <ul>
-                                <li>Дата публикации</li>
-                                <li>21 декабря 2022 г.</li>
-                            </ul>
-                            <p class="sharespage__card-description">
-                                С 21 декабря по 30 декабря, приём
-                                гастроэнтеролога всего 700 руб.
-                            </p>
-                            <a href="/single-share.html">
-                                <span>Читать полностью </span>
-                                <img
-                                    src="/images/icons/arrowLink.svg"
-                                    alt="arrow"
-                                />
-                            </a>
+                            <div class="sharespage__pagination-next btn">
+                                <span>Далее</span>
+                            </div>
                         </div>
                     </div>
                     <section class="services-widget-accordeon">
